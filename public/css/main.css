@@ -1,0 +1,23 @@
+.mainEstilo{
+    background-color: rgb(215, 212, 207);
+    align-items: center;
+    border: 1px solid black;
+}
+.navEstilo{
+    background-color: rgb(94, 40, 40);
+    border: 1px solid black;
+    text-align: center;
+    color: aliceblue;
+}
+.estiloFooter{
+    background-color: rgb(12, 58, 43);
+    border:1px solid black;
+    text-align: center;
+    color: aliceblue;
+}
+.divIndex{
+    display: inline;
+}
+.divResto{
+    display: inline;
+}
