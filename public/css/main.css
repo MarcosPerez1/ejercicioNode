@@ -15,9 +15,9 @@
     text-align: center;
     color: aliceblue;
 }
-.divIndex{
+li{
     display: inline;
 }
-.divResto{
+ul{
     display: inline;
 }

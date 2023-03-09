@@ -1,0 +1,10 @@
+<%- include("./templates/header.ejs")  %>
+<%- include("./templates/nav_resto.ejs") %>´
+
+<h1>Instalaciones</h1>
+<% instalaciones.forEach(element => { %>
+<h3><%= element.tipo %></h3>
+ <p><%= element.descripcion %></p>
+<% }) %>
+</main>
+<%- include("./templates/footer.ejs")  %>

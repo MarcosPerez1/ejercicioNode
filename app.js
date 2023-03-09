@@ -1,11 +1,17 @@
 const express = require("express");
+const cors=require ("cors")
+const{conexion}=require("./helpers/dbConect")
+require ("dotenv").config()
 
 //configurar servidor
 
 
 const app = express()
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 
+
+
+app.use(cors())
 
 // establece la carpeta static
 
@@ -17,6 +23,9 @@ console.log(__dirname + "/public")
 app.set('view engine', 'ejs')
 app.set("views", __dirname + "/views");
 
+//coenxion
+
+conexion()
 
 //rutas
 app.use("/", require("./routers/routerFront"))
