@@ -3,9 +3,9 @@ const router=express.Router()
 
 const {crearNuevoServicio, mostrarNuevoServicio}=require ("../controllers/adminControllers")
 
-router.get('/servicios/nuevo', crearNuevoServicio)
+router.post('/servicios/nuevo', crearNuevoServicio)
 
-router.post('/servicios', mostrarNuevoServicio)
+router.get('/servicios', mostrarNuevoServicio)
 
 
 module.exports = router;

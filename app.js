@@ -49,11 +49,7 @@ app.use(express.json())
 //rutas
 app.use("/", require("./routers/routerFront"))
 app.use('/api/v1/servicios',require('./routers/apiRouter'))
-
-
-// app.use('/api/v1/usuarios', require('./routers/apiRouterUser'))
 app.use('/api/v1/auth', require('./routers/apiAuth'))
-
 app.use('/admin', require('./routers/adminRouter'))
 
 

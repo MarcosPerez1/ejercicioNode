@@ -1,6 +1,5 @@
 const Servicios= require("../models/servicioModel.js");
 const Instalaciones= require("../models/instalacionesModel.js");
-// const Usuarios=require("../models/usuariosModel")
 const puppeteer = require ("puppeteer");
 
 
@@ -10,7 +9,7 @@ const getIndex= (req, res) => {
     })
 }
 
-
+ 
 const getProductos= (req, res) => {
     res.render("productos", {
         titulo: "Productos",
