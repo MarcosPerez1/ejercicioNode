@@ -1,17 +1,15 @@
 const Servicios= require("../models/servicioModel.js");
-// const Instalaciones= require("../models/instalacionesModel.js")
+const Instalaciones= require("../models/instalacionesModel.js");
+// const Usuarios=require("../models/usuariosModel")
+const puppeteer = require ("puppeteer");
+
+
 const getIndex= (req, res) => {
     res.render("index", {
 
     })
 }
 
-// const getServicios= (req, res) => {
-//     res.render("servicios", {
-//         titulo: "Servicios",
-//         msg: "en nuestra empresa disponemos de estos servicios"
-//     })
-// }
 
 const getProductos= (req, res) => {
     res.render("productos", {
@@ -36,23 +34,26 @@ const getServicios=async(req,res)=>{
     }
 }
 
-// const getInstalciones=ayns(req,res)=>{
+const getInstalciones=async(req,res)=>{
 
-//     try{
-//         const instalacionesOk = await Instalaciones.find()
-//         console.log(instalacionesOk)
+    try{
+        const instalacionesOk = await Instalaciones.find()
+        console.log(instalacionesOk)
         
-//         res.render("instalaciones",{
-//             instalacionesOk
-//         })
-//     } catch(error){
-//         console.log(error)
-//     }
-// }
+        res.render("instalaciones",{
+            instalacionesOk
+        })
+    } catch(error){
+        console.log(error)
+    }
+}
+
+
 
 module.exports={
     getIndex,
     getServicios,
     getProductos,
-   
+    getInstalciones,
+    // searchGoogle,
 }

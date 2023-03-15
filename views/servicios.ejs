@@ -1,10 +1,14 @@
-<%- include("./templates/header.ejs")  %>
-<%- include("./templates/nav_resto.ejs") %>
-    <main class="mainEstilo">
-        <h1>Servicios</h1>
-        <% servicios.forEach(element => { %>
-        <h3><%= element.titulo %></h3>
-         <p><%= element.descripcion %></p>
-        <% }) %>
-    </main>
-        <%- include("./templates/footer.ejs")  %>
+<%- include("./templates/header.ejs") %>
+    <%- include("./templates/nav_resto.ejs") %>
+        <main class="mainEstilo">
+            <h1>Servicios</h1>
+            <% servicios.forEach(element=> { %>
+                <h3>
+                    <%= element.titulo %>
+                </h3>
+                <p>
+                    <%= element.descripcion %>
+                </p>
+                <% }) %>
+        </main>
+        <%- include("./templates/footer.ejs") %>
