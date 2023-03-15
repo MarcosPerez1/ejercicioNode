@@ -1,14 +1,13 @@
 
 
-// const mostrarNuevoServicio = (req,res) =>{
-//     res.render=
-// }
+const mostrarNuevoServicio = (req,res) =>{
+}
 
-// const crearNuevoServicio = (req,res) =>{
+const crearNuevoServicio = (req,res) =>{
 
-// }
+}
 
-// module.exports={
-//     mostrarNuevoServicio,
-//     crearNuevoServicio
-// }
+module.exports={
+    mostrarNuevoServicio,
+    crearNuevoServicio
+}

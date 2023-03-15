@@ -94,8 +94,8 @@ const eliminarServicio = async (req, res) => {
         const id = req.params.id;
         await Servicio.findByIdAndDelete({ _id: id });
         return res.status(200).json({
-            ok: false,
-            msg: "el servicio no pudo ser eliminado"
+            ok: true,
+            msg: "el servicio ha sido eliminado"
         })
     } catch (error) {
         return res.status(500).json({

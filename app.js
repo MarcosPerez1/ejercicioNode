@@ -54,6 +54,8 @@ app.use('/api/v1/servicios',require('./routers/apiRouter'))
 // app.use('/api/v1/usuarios', require('./routers/apiRouterUser'))
 app.use('/api/v1/auth', require('./routers/apiAuth'))
 
+app.use('/admin', require('./routers/adminRouter'))
+
 
 //*404 error
 app.use((req,res,next)=>{

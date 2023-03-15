@@ -11,7 +11,7 @@ const UsuarioSchema = new Schema({
         unique: true
     },
     pass: {
-        type: string,
+        type: String,
         required: true
     }
 })

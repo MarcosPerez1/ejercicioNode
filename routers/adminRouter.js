@@ -1,6 +1,11 @@
-// const express =require("express")
-// const router=express.Router()
+const express =require("express")
+const router=express.Router()
 
-// const {}=require ("../controllers/adminControllers")
+const {crearNuevoServicio, mostrarNuevoServicio}=require ("../controllers/adminControllers")
 
-// router.get
+router.get('/servicios/nuevo', crearNuevoServicio)
+
+router.post('/servicios', mostrarNuevoServicio)
+
+
+module.exports = router;
