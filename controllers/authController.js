@@ -7,7 +7,7 @@ const {generarJwt}=require("../helpers/jwt")
 const createUser = async(req,res) =>{
     try{
 
-        const {name,email,pass}=req.body
+        const {nombre,email,pass}=req.body
         const user=new User (req.body)
         const usuario=await Usuarios.findOne({email})
 
@@ -23,12 +23,12 @@ const createUser = async(req,res) =>{
 
         await user.save()
 
-        const token=await generarJwt(usuario.id,usuario.name)
+        const token=await generarJwt(usuario.id,usuario.nombre)
 
         return res.status(201).json({
             ok:true,
             uid:user.id,
-            name:user.name,
+            nombre:user.name,
             email:user.email,
             token
         })
@@ -65,15 +65,15 @@ const loginUser = async (req,res)=>{
 
 const renewToken = async (req,res)=>{
 
-    const {uid,name}=req
-    const token=await generarJwt(uid,name)
+    const {uid,nombre}=req
+    const token=await generarJwt(uid,nombre)
 
 return res.status(200).json({
     ok:true,
     msg:"renew jwt",
     user:{
         uid,
-        name
+        nombre
     },
     token
 })

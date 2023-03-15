@@ -1,7 +1,7 @@
 const {Schema,model}=require ("mongoose")
 
 const UsuariosSchema = new Schema({
-    name:{
+    nombre:{
         type:String,
         required:true,
     },

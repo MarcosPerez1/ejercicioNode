@@ -1,15 +1,15 @@
-const {validationResult}=require("express-validator")
-const validarImputs=()=>{
-    const errors=validationResult(req,res,next);
-    if(!errors.isEmpty()){
+const { validationResult } = require("express-validator")
+const validarImputs = (req,res,next) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
         return res.status(400).json({
-            ok:false,
-            errores:errors.mapped()
+            ok: false,
+            errores: errors.mapped() //te mete el error dentro de la insta
         })
     }
     next()
 }
 
-module.exports={
+module.exports = {
     validarImputs,
 }
